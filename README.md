@@ -1,10 +1,4 @@
-- 👋 Hi, I’m @Vikasr9
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-
-<!---
-Vikasr9/Vikasr9 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Project: Student Registration Form
+Description: Designed And Developed A Responsive Student Registration Form Web Application
+Using HTML, CSS, JavaScript, DBMS, And Xampp The Form Collects Essential Student
+Information. 
