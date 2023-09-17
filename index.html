@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: skyblue;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container label,
+    .container input,
+    .container select,
+    .container textarea {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .container button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <div class="container">
+    <form id="registrationForm" action="process_form.php" method="post">
+      <h1>STUDENT DETAILS<span>&#10004;</span></h1>
+      <label for="rollNumber">Roll Number:</label>
+      <input type="text" id="rollNumber" name="rollNumber" required>
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+      
+      <label for="fatherName">Father's Name:</label>
+      <input type="text" id="fatherName" name="fatherName" required>
+      
+      <label for="motherName">Mother's Name:</label>
+      <input type="text" id="motherName" name="motherName" required>
+      
+      <label for="bloodGroup">Blood Group:</label>
+      <select id="bloodGroup" name="bloodGroup" required>
+        <option value="">Select a blood group</option>
+        <option value="A+">A+</option>
+        <option value="B+">B+</option>
+        <option value="O+">O+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+      
+      <label for="mobileNumber">Mobile Number:</label>
+      <input type="tel" id="mobileNumber" name="mobileNumber" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea>
+      
+      <label for="state">State:</label>
+      <select id="state" name="state" required>
+        <option value="">Select a state</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <!-- Add more state options here -->
+      </select>
+      
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">Select a city</option>
+        <option value="Bastar">Bastar</option>
+        <option value="Korba">Korba</option>
+        <option value="Bilaspur">Bilaspur</option>
+        <option value="Durg">Durg</option>
+        <option value="Raipur">Raipur</option>
+        <!-- Add more city options here -->
+      </select>
+      
+      <label for="qualification">Qualification:</label>
+      <select id="qualification" name="qualification" required>
+        <option value="">Select a qualification</option>
+        <option value="10th">10th</option>
+        <option value="12th">12th</option>
+        <!-- Add more qualification options here -->
+      </select>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const registrationForm = document.getElementById('registrationForm');
+
+    registrationForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Perform form validation here
+      const nameInput = document.getElementById('name');
+
+      if (nameInput.value === '') {
+        alert('Name field is required.');
+        nameInput.focus();
+        return;
+      }
+
+      // You can add more validation for other fields
+
+      // If validation passes, submit the form
+      registrationForm.submit();
+    });
+  </script>
+</body>
+</html>
